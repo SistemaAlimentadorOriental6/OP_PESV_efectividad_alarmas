@@ -92,7 +92,7 @@ username = 'admin'
 password = 'admin'
 
 if __name__ == '__main__':
-    url1_1 = 'http://181.143.106.68:12056/api/v1/basic/key?username=' + username + '&password=' + password
+    url1_1 = 'http://192.168.90.68:12056/api/v1/basic/key?username=' + username + '&password=' + password
     response1_1 = requests.get(url1_1)
     
     if response1_1.status_code == 200:
@@ -110,7 +110,7 @@ print(key)
 
 # Sacar el listado de dispositivos y dejar solo los de SAO
 if __name__ == '__main__':
-    url2_2 = 'http://181.143.106.68:12056/api/v1/basic/devices?key=' + key
+    url2_2 = 'http://192.168.90.68:12056/api/v1/basic/devices?key=' + key
     response2_2 = requests.get(url2_2)
     
     if response2_2.status_code == 200:
@@ -187,7 +187,7 @@ end_time = fin_dia.strftime('%Y-%m-%d %H:%M:%S')
 df_detail_alarmas = pd.DataFrame()
 
 if __name__ == '__main__':
-    url4_2 = 'http://181.143.106.68:12056/api/v1/basic/alarm/detail'
+    url4_2 = 'http://192.168.90.68:12056/api/v1/basic/alarm/detail'
     rq4_2 =  {
 "key": key,
 "terid": main_terid,
